@@ -1,26 +1,53 @@
 @import "tailwindcss";
+@import "tailwindcss/theme.css";
+@import "tailwindcss/utilities.css";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 0 0% 50%; /* Anillo en gris concreto */
+    
+    --radius: 0.5rem;
+    
+    /* Colores personalizados */
+    --primary: 0 0% 50%; /* Gris concreto */
+    --primary-foreground: 210 40% 98%;
+    
+    --secondary: 220 60% 30%; /* Azul oscuro */
+    --secondary-foreground: 0 0% 100%; /* Texto blanco para mejor contraste */
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 0 0% 50%; /* Anillo en gris concreto también en modo oscuro */
+    
+    /* Modo oscuro con los mismos colores pero ajustados */
+    --primary: 0 0% 50%; /* Gris más claro para modo oscuro */
+    --primary-foreground: 222.2 47.4% 11.2%;
+    
+    --secondary: 220 50% 40%; /* Azul un poco más claro para modo oscuro */
+    --secondary-foreground: 0 0% 100%;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* Aplica estilos manualmente como fallback */
+@layer base {
+  * {
+    border-color: hsl(var(--border));
+  }
+  body {
+    background: hsl(var(--background));
+    color: hsl(var(--foreground));
+    overflow-x: hidden;
+  }
+
+  
 }
