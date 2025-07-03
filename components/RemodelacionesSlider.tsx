@@ -5,14 +5,20 @@ import Image from "next/image"
 import { ChevronLeft, ChevronRight } from "lucide-react"
 
 const slides = [
-  { image: "/remodelacion-baño.webp" },
+  { image: "/remodelacion-baño-0.webp" },
+  { image: "/remodelacion-cocina.webp" },
   { image: "/remodelacion-baño-1.webp" },
+  { image: "/remodelacion-cocina-1.webp" },
   { image: "/remodelacion-baño-2.webp" },
+  { image: "/remodelacion-cocina-2.webp" },
   { image: "/remodelacion-baño-3.webp" },
+  { image: "/remodelacion-cocina-3.webp" },
   { image: "/remodelacion-baño-4.webp" },
   { image: "/remodelacion-baño-5.webp" },
   { image: "/remodelacion-baño-6.webp" },
   { image: "/remodelacion-baño-7.webp" },
+  { image: "/remodelacion-baño.webp" },
+  { image: "/remodelacion-baño-1jpg.webp" },
 ]
 
 export function RemodelacionesSlider() {
@@ -86,7 +92,7 @@ export function RemodelacionesSlider() {
 
   return (
     <section
-      className="relative w-full h-[40vh] sm:h-[60vh]"
+      className="relative w-full h-full"
       onTouchStart={onTouchStart}
       onTouchEnd={onTouchEnd}
     >
@@ -99,11 +105,13 @@ export function RemodelacionesSlider() {
         >
           <Image
             src={slide.image}
-            alt={`Remodelación de baño - Vista ${index + 1}`}
+            alt={`Proyecto de remodelación - Vista ${index + 1}`}
             fill
             className="object-cover"
             priority={index === currentSlide}
             loading={index === currentSlide ? "eager" : "lazy"}
+            quality={95}
+            sizes="100vw"
           />
         </div>
       ))}
@@ -125,7 +133,7 @@ export function RemodelacionesSlider() {
       </button>
 
       {/* Slide Indicators */}
-      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-2">
+      <div className="absolute bottom-4 justify-center flex space-x-2">
         {slides.map((_, index) => (
           <button
             key={index}

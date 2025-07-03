@@ -1,36 +1,149 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Grupo RF - Sitio Web
 
-## Getting Started
+Sitio web profesional para Grupo RF, empresa de construcción y remodelación en Santiago de Chile.
 
-First, run the development server:
+## 🚀 Características Principales
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+### Página de Servicios Mejorada
+- **Navegación Rápida**: Menú de acceso directo a todos los servicios
+- **Sliders Interactivos**: Cada servicio tiene su propio carrusel de imágenes
+- **Diseño Responsivo**: Optimizado para móviles, tablets y desktop
+- **Navegación Suave**: Scroll automático a las secciones
+- **Testimonios**: Sección de opiniones de clientes
+- **Proceso de Trabajo**: Explicación clara del flujo de trabajo
+
+### Servicios Incluidos
+1. **Remodelaciones** - Transformación de espacios existentes
+2. **Construcciones** - Proyectos residenciales y comerciales
+3. **Diseño de Interiores** - Creación de espacios estéticos y funcionales
+4. **Ampliaciones** - Expansión de espacios actuales
+5. **Renovaciones** - Revitalización de espacios antiguos
+
+### Componentes Creados
+- `ServicesBanner` - Banner principal con slider automático
+- `RemodelacionesSlider` - Carrusel de imágenes de remodelaciones
+- `ConstruccionesSlider` - Carrusel de imágenes de construcciones
+- `DisenoSlider` - Carrusel de imágenes de diseño
+- `AmpliacionesSlider` - Carrusel de imágenes de ampliaciones
+- `RenovacionesSlider` - Carrusel de imágenes de renovaciones
+
+## 🛠️ Tecnologías Utilizadas
+
+- **Next.js 15** - Framework de React
+- **TypeScript** - Tipado estático
+- **Tailwind CSS** - Framework de estilos
+- **Lucide React** - Iconos
+- **React Slick** - Sliders (en HeroSlider)
+
+## 📁 Estructura del Proyecto
+
+```
+grupo-rf/
+├── app/
+│   ├── services/
+│   │   └── page.tsx          # Página de servicios mejorada
+│   └── page.tsx              # Página principal
+├── components/
+│   ├── ServicesBanner.tsx    # Banner principal
+│   ├── RemodelacionesSlider.tsx
+│   ├── ConstruccionesSlider.tsx
+│   ├── DisenoSlider.tsx
+│   ├── AmpliacionesSlider.tsx
+│   ├── RenovacionesSlider.tsx
+│   ├── HeroSlider.tsx
+│   └── footer.tsx
+├── public/                   # Imágenes del proyecto
+└── README.md
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🎨 Características de Diseño
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Paleta de Colores
+- **Azul Principal**: `blue-950`, `blue-900`, `blue-800`
+- **Grises**: `gray-100`, `gray-300`, `gray-600`, `gray-800`
+- **Blancos**: `white`, `gray-200`
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Tipografía
+- **Títulos**: `font-bold`, tamaños `text-2xl` a `text-6xl`
+- **Texto**: `text-lg`, `text-xl`
+- **Descripciones**: `text-gray-600`, `text-gray-300`
 
-## Learn More
+### Responsividad
+- **Mobile First**: Diseño optimizado para móviles
+- **Breakpoints**: `md:` (768px), `lg:` (1024px)
+- **Grid System**: `grid-cols-1 md:grid-cols-2 lg:grid-cols-3/4/5`
 
-To learn more about Next.js, take a look at the following resources:
+## 🚀 Funcionalidades
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Sliders Interactivos
+- **Autoplay**: Cambio automático cada 5 segundos
+- **Navegación Manual**: Botones de anterior/siguiente
+- **Indicadores**: Puntos de navegación
+- **Touch Support**: Swipe en dispositivos móviles
+- **Pausa en Interacción**: Se pausa al interactuar
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Navegación
+- **Scroll Suave**: Navegación fluida entre secciones
+- **Anclas**: Enlaces directos a cada servicio
+- **Menú Rápido**: Acceso inmediato desde el banner
 
-## Deploy on Vercel
+### Optimización
+- **Lazy Loading**: Carga diferida de imágenes
+- **Priority Loading**: Imágenes críticas cargan primero
+- **SEO Optimized**: Meta tags y estructura semántica
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📱 Experiencia de Usuario
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Accesibilidad
+- **ARIA Labels**: Etiquetas para lectores de pantalla
+- **Focus Management**: Navegación por teclado
+- **Contraste**: Colores con buen contraste
+- **Alt Text**: Descripciones de imágenes
+
+### Performance
+- **Build Optimizado**: Sin errores de linting
+- **Imágenes Optimizadas**: Formato WebP
+- **Componentes Eficientes**: Re-renderizado optimizado
+
+## 🔧 Instalación y Uso
+
+```bash
+# Instalar dependencias
+npm install
+
+# Ejecutar en desarrollo
+npm run dev
+
+# Construir para producción
+npm run build
+
+# Ejecutar en producción
+npm start
+```
+
+## 📸 Imágenes Incluidas
+
+El proyecto incluye imágenes reales de proyectos:
+- Remodelaciones de baños
+- Construcciones residenciales
+- Proyectos de diseño
+- Ampliaciones y renovaciones
+- Vistas exteriores e interiores
+
+## 🎯 Próximas Mejoras
+
+- [ ] Galería de proyectos completa
+- [ ] Formulario de contacto funcional
+- [ ] Blog de consejos de construcción
+- [ ] Calculadora de presupuestos
+- [ ] Integración con redes sociales
+- [ ] Chat en vivo
+- [ ] Sistema de citas online
+
+## 📞 Contacto
+
+Para más información sobre el proyecto o solicitar modificaciones, contactar a Grupo RF.
+
+---
+
+**Desarrollado con ❤️ para Grupo RF**

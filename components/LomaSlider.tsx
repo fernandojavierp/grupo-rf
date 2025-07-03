@@ -5,7 +5,12 @@ import Image from "next/image"
 import { ChevronLeft, ChevronRight } from "lucide-react"
 
 const slides = [
+  { image: "/vista-exterior-loma-la-cruz.webp" },
+  { image: "/banner-loma-la-cruz.webp" },
+  { image: "/baño-remodelado.webp" },
+  { image: "/gimnasio-loma-la-cruz-1.webp" },
   { image: "/construccion-loma.webp" },
+  { image: "/construccion-loma-1.webp" },
   { image: "/construccion-loma-2.webp" },
   { image: "/construccion-loma-3.webp" },
   { image: "/construccion-loma-4.webp" },
@@ -18,17 +23,9 @@ const slides = [
   { image: "/construccion-loma-11.webp" },
   { image: "/construccion-loma-12.webp" },
   { image: "/construccion-loma-13.webp" },
-  { image: "/proyecto-camara-leis.webp" },
-  { image: "/proyecto-camara-leis-1.webp" },
-  { image: "/proyecto-camara-leis-2.webp" },
-  { image: "/proyecto-camara-leis-3.webp" },
-  { image: "/proyecto-camara-leis-4.webp" },
-  { image: "/proyecto-camara-leis-5.webp" },
-  { image: "/proyecto-camara-leis-6.webp" },
-  { image: "/proyecto-camara-leis-7.webp" },
 ]
 
-export function ConstruccionesSlider() {
+export function LomaSlider() {
   const [currentSlide, setCurrentSlide] = useState(0)
   const intervalRef = useRef<NodeJS.Timeout | null>(null)
   const touchStartX = useRef<number | null>(null)
@@ -112,12 +109,13 @@ export function ConstruccionesSlider() {
         >
           <Image
             src={slide.image}
-            alt={`Proyecto de construcción - Vista ${index + 1}`}
+            alt={`Proyecto Casa Loma La Cruz - Vista ${index + 1}`}
             fill
-            className="object-cover"
+            className="object-cover w-full h-full"
             priority={index === currentSlide}
             loading={index === currentSlide ? "eager" : "lazy"}
-            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+            quality={95}
+            sizes="100vw"
           />
         </div>
       ))}
@@ -156,4 +154,4 @@ export function ConstruccionesSlider() {
       </div>
     </section>
   )
-}
+} 

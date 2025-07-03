@@ -1,89 +1,91 @@
 // components/HeroSlider.tsx
 'use client';
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
-import { Button } from '@/components/ui/button';
-import Slider from 'react-slick';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
 
-// Datos de las imágenes del slider
 const heroImages = [
   {
-    src: '/prueba-escalera.jpg', // Reemplaza con tus imágenes reales
+    src: '/prueba-escalera.jpg',
     alt: 'Obra de construcción en progreso'
   },
   {
-    src: '/prueba-escalera-1.webp',
+    src: '/remodelacion-baño-0.webp',
     alt: 'Equipo de construcción trabajando'
   },
   {
     src: '/prueba-escalera-2.webp',
     alt: 'Remodelación de interiores terminada'
   },
+  {
+    src: '/baño-remodelado.webp',
+    alt: 'Baño remodelado'
+  },
+  {
+    src: '/baño-remodelado-1.webp',
+    alt: 'Baño remodelado'
+  },
 ];
 
 export function HeroSlider() {
-  // Configuración del slider
-  const settings = {
-    dots: false,
-    infinite: true,
-    speed: 1000,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 5000,
-    pauseOnHover: false,
-    fade: true,
-    arrows: true,
-    cssEase: 'cubic-bezier(0.7, 0, 0.3, 1)',
-    appendDots: (dots: React.ReactNode) => (
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
-        <ul className="flex -space-x-60">{dots}</ul>
-      </div>
-    ),
-    customPaging: () => (
-      <div className="w-3 h-3 rounded-full bg-white/50 hover:bg-white transition-colors cursor-pointer" />
-    ),
-  };
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % heroImages.length);
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, []);
 
   return (
-    <section className="relative w-full h-[80vh]">
-      {/* Slider principal */}
-      <Slider {...settings} className="h-full w-full">
-        {heroImages.map((image, index) => (
-          <div key={index} className="relative h-[80vh] w-full">
-            <Image
-              src={image.src}
-              alt={image.alt}
-              fill
-              className="object-cover brightness-50"
-              priority={index === 0} // Solo la primera imagen con prioridad
-              quality={80}
-              sizes="100vw"
-            />
-          </div>
-        ))}
-      </Slider>
-      
+    <section className="relative w-full h-[60vh] md:h-[80vh] lg:h-[90vh] overflow-hidden">
+      {/* Imágenes del slider */}
+      {heroImages.map((image, index) => (
+        <div
+          key={index}
+          className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
+            index === currentSlide ? 'opacity-100' : 'opacity-0'
+          }`}
+        >
+          <Image
+            src={image.src}
+            alt={image.alt}
+            fill
+            className="object-cover"
+            priority={index === 0}
+            quality={90}
+            sizes="100vw"
+          />
+          {/* Overlay oscuro */}
+          <div className="absolute inset-0 bg-black/40"></div>
+        </div>
+      ))}
+
       {/* Contenido sobrepuesto */}
-      <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4 md:px-6 z-10">
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-200 mb-4">
+      <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4 md:px-8 z-10">
+        <h1 className="text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-4 md:mb-6 leading-tight">
           Grupo RF Construcciones y Servicios
         </h1>
-        <p className="text-xl md:text-2xl text-gray-200 mb-8 max-w-3xl">
+        <p className="text-lg md:text-xl lg:text-2xl text-white/90 mb-6 md:mb-8 max-w-4xl leading-relaxed">
           Transformando espacios con calidad y profesionalismo en Santiago de Chile
         </p>
-        <div className="flex flex-col sm:flex-row gap-4">
-          <Button asChild size="lg" className="bg-blue-950 hover:bg-blue-900">
-            <Link href="/contact" className="text-white hover:text-white">Solicitar presupuesto</Link>
-          </Button>
-          <Button asChild size="lg" variant="outline" className="text-white border-white hover:bg-white/10">
-            <Link href="/projects">Ver proyectos</Link>
-          </Button>
-        </div>
+      </div>
+
+      {/* Indicadores de navegación */}
+      <div className="absolute bottom-4 md:bottom-8 w-full flex justify-center space-x-2 md:space-x-3 z-20 overflow-visible h-6 md:h-8">
+        {heroImages.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => setCurrentSlide(index)}
+            className={`w-2 md:w-3 h-2 md:h-3 rounded-full transition-all duration-300 ${
+              index === currentSlide 
+                ? 'bg-white scale-125' 
+                : 'bg-white/50 hover:bg-white/75'
+            }`}
+            aria-label={`Ir a slide ${index + 1}`}
+          />
+        ))}
       </div>
     </section>
   );

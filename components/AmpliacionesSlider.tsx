@@ -6,29 +6,14 @@ import { ChevronLeft, ChevronRight } from "lucide-react"
 
 const slides = [
   { image: "/construccion-loma.webp" },
+  { image: "/construccion-loma-1.webp" },
   { image: "/construccion-loma-2.webp" },
   { image: "/construccion-loma-3.webp" },
   { image: "/construccion-loma-4.webp" },
   { image: "/construccion-loma-5.webp" },
-  { image: "/construccion-loma-6.webp" },
-  { image: "/construccion-loma-7.webp" },
-  { image: "/construccion-loma-8.webp" },
-  { image: "/construccion-loma-9.webp" },
-  { image: "/construccion-loma-10.webp" },
-  { image: "/construccion-loma-11.webp" },
-  { image: "/construccion-loma-12.webp" },
-  { image: "/construccion-loma-13.webp" },
-  { image: "/proyecto-camara-leis.webp" },
-  { image: "/proyecto-camara-leis-1.webp" },
-  { image: "/proyecto-camara-leis-2.webp" },
-  { image: "/proyecto-camara-leis-3.webp" },
-  { image: "/proyecto-camara-leis-4.webp" },
-  { image: "/proyecto-camara-leis-5.webp" },
-  { image: "/proyecto-camara-leis-6.webp" },
-  { image: "/proyecto-camara-leis-7.webp" },
 ]
 
-export function ConstruccionesSlider() {
+export function AmpliacionesSlider() {
   const [currentSlide, setCurrentSlide] = useState(0)
   const intervalRef = useRef<NodeJS.Timeout | null>(null)
   const touchStartX = useRef<number | null>(null)
@@ -42,7 +27,7 @@ export function ConstruccionesSlider() {
       setTimeout(() => {
         autoplayPaused.current = false
         startInterval()
-      }, 7000) // Pausa 7 segundos tras interacción
+      }, 7000)
     } else {
       startInterval()
     }
@@ -74,25 +59,22 @@ export function ConstruccionesSlider() {
     resetInterval(true)
   }
 
-  // Detecta swipe horizontal
   const onTouchStart = (e: React.TouchEvent) => {
     touchStartX.current = e.changedTouches[0].clientX
   }
+  
   const onTouchEnd = (e: React.TouchEvent) => {
     touchEndX.current = e.changedTouches[0].clientX
     if (touchStartX.current !== null && touchEndX.current !== null) {
       const deltaX = touchStartX.current - touchEndX.current
-      if (Math.abs(deltaX) > 50) { // umbral de swipe
+      if (Math.abs(deltaX) > 50) {
         if (deltaX > 0) {
-          // swipe left → next slide
           nextSlide()
         } else {
-          // swipe right → prev slide
           prevSlide()
         }
       }
     }
-    // reset valores
     touchStartX.current = null
     touchEndX.current = null
   }
@@ -112,12 +94,11 @@ export function ConstruccionesSlider() {
         >
           <Image
             src={slide.image}
-            alt={`Proyecto de construcción - Vista ${index + 1}`}
+            alt={`Ampliaciones - Vista ${index + 1}`}
             fill
             className="object-cover"
             priority={index === currentSlide}
             loading={index === currentSlide ? "eager" : "lazy"}
-            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
           />
         </div>
       ))}
@@ -139,7 +120,7 @@ export function ConstruccionesSlider() {
       </button>
 
       {/* Slide Indicators */}
-      <div className="absolute bottom-4 justify-center flex space-x-2">
+      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-2">
         {slides.map((_, index) => (
           <button
             key={index}
@@ -156,4 +137,4 @@ export function ConstruccionesSlider() {
       </div>
     </section>
   )
-}
+} 

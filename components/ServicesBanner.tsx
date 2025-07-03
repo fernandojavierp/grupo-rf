@@ -4,22 +4,38 @@ import { useState, useEffect } from "react"
 import Image from "next/image"
 import { ChevronLeft, ChevronRight } from "lucide-react"
 
-const slides = [
+type Slide = {
+  type?: "comparison"
+  image?: string
+  leftImage?: string
+  rightImage?: string
+  title: string
+  description: string
+}
+
+const slides: Slide[] = [
   {
-    image: "/vista-exterior-loma-la-cruz.webp",
-    title: "Servicios Profesionales",
-    description: "Soluciones integrales para tus proyectos de construcción"
+    type: "comparison",
+    leftImage: "/baño-obra-gruesa.webp",
+    rightImage: "/vista-interior-baño-loma-la-cruz.webp",
+    title: "",
+    description: "Transformación completa de espacios"
   },
   {
-    image: "/prueba-escalera-2.webp",
-    title: "Calidad Garantizada",
-    description: "Más de 10 años de experiencia en el sector"
+    type: "comparison",
+    leftImage: "/escaleraexterior-diseño.png",
+    rightImage: "/escalera-terminada-loma-la-cruz.webp",
+    title: "",
+    description: "Del plano 3D a la realidad"
   },
   {
-    image: "/prueba-escalera-1.webp",
-    title: "Diseño y Construcción",
-    description: "Transformamos tus ideas en realidad"
-  }
+    type: "comparison",
+    leftImage: "/proyecto-camara-leis.webp",
+    rightImage: "/proyecto-camara-leis-10.webp",
+    title: "",
+    description: "Construcción especializada"
+  },
+  
 ]
 
 export function ServicesBanner() {
@@ -49,21 +65,62 @@ export function ServicesBanner() {
             index === currentSlide ? "opacity-100" : "opacity-0"
           }`}
         >
-          <Image
-            src={slide.image}
-            alt={slide.title}
-            fill
-            className="object-cover brightness-50"
-            priority={index === 0}
-          />
-          <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4 md:px-6">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 transform transition-all duration-500 translate-y-0">
-              {slide.title}
-            </h1>
-            <p className="text-xl text-white mb-8 max-w-3xl transform transition-all duration-500 translate-y-0">
-              {slide.description}
-            </p>
-          </div>
+          {slide.type === "comparison" ? (
+            // Comparación lado a lado
+            <div className="relative w-full h-full">
+              <div className="grid grid-cols-2 h-full">
+                <div className="relative">
+                  <Image
+                    src={slide.leftImage!}
+                    alt="Antes del proyecto"
+                    fill
+                    className="object-cover brightness-75"
+                  />
+                  <div className="absolute top-4 left-4 bg-black/50 text-white px-3 py-1 rounded text-sm font-medium w-fit inline-block">
+                    {index === 0 ? "Obra Gris" : index === 1 ? "Plano 3D" : "Antes"}
+                  </div>
+                </div>
+                <div className="relative">
+                  <Image
+                    src={slide.rightImage!}
+                    alt="Después del proyecto"
+                    fill
+                    className="object-cover brightness-75"
+                  />
+                  <div className="absolute top-4 right-4 bg-black/50 text-white px-3 py-1 rounded text-sm font-medium w-fit inline-block">
+                    {index === 0 ? "Terminado" : index === 1 ? "Resultado Final" : "Después"}
+                  </div>
+                </div>
+              </div>
+              <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4 md:px-6 bg-black/20">
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 transform transition-all duration-500 translate-y-0">
+                  {slide.title}
+                </h1>
+                <p className="text-xl text-white mb-8 max-w-3xl transform transition-all duration-500 translate-y-0">
+                  {slide.description}
+                </p>
+              </div>
+            </div>
+          ) : (
+            // Imagen normal
+            <>
+              <Image
+                src={slide.image!}
+                alt={slide.title}
+                fill
+                className="object-cover brightness-50"
+                priority={index === 0}
+              />
+              <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4 md:px-6">
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 transform transition-all duration-500 translate-y-0">
+                  {slide.title}
+                </h1>
+                <p className="text-xl text-white mb-8 max-w-3xl transform transition-all duration-500 translate-y-0">
+                  {slide.description}
+                </p>
+              </div>
+            </>
+          )}
         </div>
       ))}
 
@@ -84,7 +141,7 @@ export function ServicesBanner() {
       </button>
 
       {/* Slide Indicators */}
-      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-2">
+      <div className="absolute bottom-4 justify-center flex space-x-2">
         {slides.map((_, index) => (
           <button
             key={index}

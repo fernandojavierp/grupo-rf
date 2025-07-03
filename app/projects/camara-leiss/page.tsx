@@ -1,23 +1,23 @@
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
-import { LomaSlider } from "@/components/LomaSlider"
+import { CamaraLeissSlider } from "@/components/CamaraLeissSlider"
 
-export default function LomaLaCruzPage() {
+export default function CamaraLeissPage() {
   return (
     <div className="flex flex-col min-h-screen bg-blue-950 text-gray-300">
       <div className="container mx-auto px-4 py-8 sm:py-12 md:py-16">
         
         {/* Title */}
         <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center text-white mb-4">
-          Casa Loma La Cruz
+          Proyecto Cámara Leiss
         </h1>
         <p className="text-base sm:text-lg text-center text-gray-400 mb-8 sm:mb-12 max-w-3xl mx-auto px-4">
-          Remodelación integral del baño, patio exterior, fachada de piscina, construcción de gimnasio y escalera exterior.
+          Construcción y habilitación de horno industrial para procesos de secado y curado.
         </p>
         
         {/* Image Carousel */}
         <div className="mb-8 sm:mb-12 h-[250px] sm:h-[300px] md:h-[500px] rounded-lg overflow-hidden shadow-2xl">
-          <LomaSlider />
+          <CamaraLeissSlider />
         </div>
         
         {/* Project Details */}
@@ -26,13 +26,13 @@ export default function LomaLaCruzPage() {
           <div className="md:col-span-2">
             <h2 className="text-xl sm:text-2xl font-semibold text-white mb-4">Descripción del proyecto</h2>
             <p className="text-sm sm:text-base text-gray-400 mb-4">
-              Este proyecto residencial en el sector de Providencia consistió en una transformación integral de la vivienda, abarcando tanto espacios interiores como exteriores. Se realizó una remodelación completa del baño principal, modernizando todos sus elementos y acabados para crear un ambiente más funcional y contemporáneo.
+              Este proyecto industrial consistió en la construcción y habilitación completa de un horno industrial especializado para procesos de secado y curado. El proyecto requirió un alto nivel de precisión técnica y conocimiento en sistemas de control de temperatura y ventilación industrial.
             </p>
             <p className="text-sm sm:text-base text-gray-400 mb-4">
-              En el área exterior, se remodeló completamente el patio exterior, mejorando su funcionalidad y estética. Se renovó la fachada de la piscina, creando un espacio más atractivo y funcional para el disfrute familiar. Como elemento destacado, se construyó un gimnasio completo con todos los acabados necesarios para el entrenamiento en casa.
+              Se construyó una estructura metálica robusta que soporta las altas temperaturas requeridas para los procesos industriales. El sistema de control de temperatura fue diseñado e implementado para mantener condiciones óptimas durante todo el proceso de secado y curado, garantizando la calidad del producto final.
             </p>
             <p className="text-sm sm:text-base text-gray-400">
-              Uno de los elementos más importantes del proyecto fue la construcción de una escalera exterior que conecta diferentes niveles de la propiedad, mejorando la circulación y añadiendo un elemento arquitectónico distintivo. Todos los trabajos se realizaron con materiales de alta calidad y un diseño que mantiene la coherencia visual de toda la propiedad.
+              El proyecto incluyó la instalación de sistemas de ventilación especializados, aislamiento térmico de alta eficiencia y controles automatizados para monitorear y regular las condiciones internas del horno. Todos los materiales utilizados fueron seleccionados para cumplir con los estándares industriales más exigentes.
             </p>
           </div>
           
@@ -42,19 +42,19 @@ export default function LomaLaCruzPage() {
               <ul className="space-y-3 text-gray-400">
                 <li className="flex items-center">
                   <span className="font-semibold text-gray-300 w-20 sm:w-24 text-sm sm:text-base">Categoría:</span>
-                  <span className="text-sm sm:text-base">Residencial</span>
+                  <span className="text-sm sm:text-base">Industrial</span>
                 </li>
                 <li className="flex items-center">
                   <span className="font-semibold text-gray-300 w-20 sm:w-24 text-sm sm:text-base">Ubicación:</span>
-                  <span className="text-sm sm:text-base">Providencia, Santiago</span>
+                  <span className="text-sm sm:text-base">Santiago, Chile</span>
                 </li>
                 <li className="flex items-center">
                   <span className="font-semibold text-gray-300 w-20 sm:w-24 text-sm sm:text-base">Servicios:</span>
-                  <span className="text-sm sm:text-base">Remodelación, Construcción</span>
+                  <span className="text-sm sm:text-base">Construcción Industrial</span>
                 </li>
                 <li className="flex items-center">
-                  <span className="font-semibold text-gray-300 w-20 sm:w-24 text-sm sm:text-base">Área:</span>
-                  <span className="text-sm sm:text-base">180 m²</span>
+                  <span className="font-semibold text-gray-300 w-20 sm:w-24 text-sm sm:text-base">Capacidad:</span>
+                  <span className="text-sm sm:text-base">500 m³</span>
                 </li>
               </ul>
             </div>
@@ -71,4 +71,4 @@ export default function LomaLaCruzPage() {
       </div>
     </div>
   )
-}
+} 
