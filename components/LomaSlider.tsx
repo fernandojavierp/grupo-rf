@@ -6,11 +6,9 @@ import { ChevronLeft, ChevronRight } from "lucide-react"
 
 const slides = [
   { image: "/vista-exterior-loma-la-cruz.webp" },
-  { image: "/banner-loma-la-cruz.webp" },
   { image: "/baño-remodelado.webp" },
   { image: "/gimnasio-loma-la-cruz-1.webp" },
   { image: "/construccion-loma.webp" },
-  { image: "/construccion-loma-1.webp" },
   { image: "/construccion-loma-2.webp" },
   { image: "/construccion-loma-3.webp" },
   { image: "/construccion-loma-4.webp" },

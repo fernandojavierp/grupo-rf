@@ -16,7 +16,7 @@ export default function LomaLaCruzPage() {
         </p>
         
         {/* Image Carousel */}
-        <div className="mb-8 sm:mb-12 h-[250px] sm:h-[300px] md:h-[500px] rounded-lg overflow-hidden shadow-2xl">
+        <div className="mb-8 h-132 sm:mb-12 lg:h-200 sm:h-132 md:h-150 rounded-lg overflow-hidden shadow-2xl">
           <LomaSlider />
         </div>
         

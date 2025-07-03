@@ -36,9 +36,9 @@ export const metadata: Metadata = {
 
 export default function ServicesPage() {
   return (
-    <div className="flex flex-col w-full overflow-x-hidden overflow-y-auto">
-      {/* Hero Section */}
-      <section className="relative w-full h-[40vh] sm:h-[50vh] lg:h-[60vh] overflow-hidden mb-0">
+    <div className="flex flex-col w-full overflow-x-visible overflow-y-visible">
+              {/* Hero Section */}
+        <section className="relative w-full h-[400px] sm:h-[320px] md:h-[400px] lg:h-[428px] mb-0 overflow-visible">
         <ServicesBanner />
       </section>
       
@@ -52,7 +52,7 @@ export default function ServicesPage() {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 max-w-6xl mt-10 mx-auto">
             <Link 
               href="#remodelaciones" 
               className="group flex flex-col items-center p-4 sm:p-6 lg:p-8 bg-blue-950 rounded-xl hover:bg-blue-800 transition-all duration-300 text-white shadow-lg hover:shadow-xl hover:-translate-y-2 min-h-[140px] sm:min-h-[160px] lg:min-h-[180px]"
@@ -130,14 +130,14 @@ export default function ServicesPage() {
                 <Link href="/contact">Solicitar presupuesto</Link>
               </Button>
             </div>
-            <div className="relative h-100 sm:h-64 md:h-80 lg:h-96 xl:h-[500px] rounded-lg sm:rounded-xl overflow-hidden shadow-lg sm:shadow-xl order-1 lg:order-2">
+            <div className="relative h-[400px] sm:h-[320px] md:h-[400px] lg:h-[650px] rounded-lg sm:rounded-xl overflow-hidden shadow-lg sm:shadow-xl order-1 lg:order-2">
               <RemodelacionesSlider />
             </div>
           </div>
 
           {/* Service 2 */}
           <div id="construcciones" className="grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-center mb-16 sm:mb-20 lg:mb-24 scroll-mt-32">
-            <div className="relative h-100 sm:h-64 md:h-80 lg:h-96 xl:h-[500px] rounded-lg sm:rounded-xl overflow-hidden shadow-lg sm:shadow-xl">
+            <div className="relative h-[400px] sm:h-[320px] md:h-[400px] lg:h-[650px] rounded-lg sm:rounded-xl overflow-hidden shadow-lg sm:shadow-xl">
               <ConstruccionesSlider />
             </div>
             <div>
@@ -167,7 +167,7 @@ export default function ServicesPage() {
 
           {/* Service 3 */}
           <div id="diseño" className="grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-center mb-16 sm:mb-20 lg:mb-24 scroll-mt-32">
-            <div className="relative h-100 sm:h-64 md:h-80 lg:h-96 xl:h-[500px] rounded-lg sm:rounded-xl overflow-hidden shadow-lg sm:shadow-xl order-1 lg:order-2">
+            <div className="relative h-[400px] sm:h-[320px] md:h-[400px] lg:h-[650px] rounded-lg sm:rounded-xl overflow-hidden shadow-lg sm:shadow-xl order-1 lg:order-2">
               <DisenoSlider />
             </div>
             <div className="order-2 lg:order-1">
