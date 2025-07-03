@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react"
 import Image from "next/image"
-import { ChevronLeft, ChevronRight } from "lucide-react"
+
 
 type Slide = {
   type?: "comparison"
@@ -48,13 +48,7 @@ export function ServicesBanner() {
     return () => clearInterval(timer)
   }, [])
 
-  const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length)
-  }
-
-  const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % slides.length)
-  }
+ 
 
   return (
     <section className="relative w-full h-[60vh]">
