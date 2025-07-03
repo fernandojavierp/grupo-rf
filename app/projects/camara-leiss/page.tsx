@@ -16,7 +16,7 @@ export default function CamaraLeissPage() {
         </p>
         
         {/* Image Carousel */}
-        <div className="mb-8 sm:mb-12 lg:h-200 sm:h-132 md:h-150 rounded-lg overflow-hidden shadow-2xl">
+        <div className="mb-8 sm:mb-12 h-[400px] sm:h-[320px] md:h-[400px] lg:h-[700px] rounded-lg overflow-hidden shadow-2xl">
           <CamaraLeissSlider />
         </div>
         

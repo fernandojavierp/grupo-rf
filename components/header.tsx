@@ -77,7 +77,7 @@ export default function Header() {
           <Button
             variant="ghost"
             size="lg"
-            className="p-7"
+            className="p-10"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             {isMenuOpen ? <X className="h-8 w-8" /> : <Menu className="h-8 w-8" />}
