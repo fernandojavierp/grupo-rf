@@ -167,7 +167,7 @@ export default function ServicesPage() {
 
           {/* Service 3 */}
           <div id="diseño" className="grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-center mb-16 sm:mb-20 lg:mb-24 scroll-mt-32">
-            <div className="relative h-48 sm:h-64 md:h-80 lg:h-96 xl:h-[500px] rounded-lg sm:rounded-xl overflow-hidden shadow-lg sm:shadow-xl order-1 lg:order-2">
+            <div className="relative h-100 sm:h-64 md:h-80 lg:h-96 xl:h-[500px] rounded-lg sm:rounded-xl overflow-hidden shadow-lg sm:shadow-xl order-1 lg:order-2">
               <DisenoSlider />
             </div>
             <div className="order-2 lg:order-1">
