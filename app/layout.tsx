@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     siteName: "Grupo RF",
     images: [
       {
-        url: "/grupo-rf-logo.png",
+        url: "/grupo-rf-logo.webp",
         width: 1200,
         height: 630,
         alt: "Grupo RF Logo"
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Grupo RF Construcciones y Servicios | Santiago de Chile",
     description: "Empresa de construcciones y servicios en Santiago de Chile. Ofrecemos servicios de alta calidad en construcción, remodelación y diseño de interiores.",
-    images: ["/grupo-rf-logo.png"]
+    images: ["/grupo-rf-logo.webp"]
   },
   icons: {
     icon: [

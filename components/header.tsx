@@ -32,7 +32,7 @@ export default function Header() {
         <div className="flex justify-start">
           <Link href="/" className="flex items-center gap-2  overflow-hidden">
             <Image
-              src="/grupo-rf-logo.png"
+              src="/grupo-rf-logo.webp"
               alt="Grupo RF Logo"
               width={120}
               height={60}

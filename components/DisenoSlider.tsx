@@ -5,14 +5,14 @@ import Image from "next/image"
 import { ChevronLeft, ChevronRight } from "lucide-react"
 
 const slides = [
-  { image: "/escaleraexterior-diseño.png" },
-  { image: "/bodega-diseño.png" },
-  { image: "/bodega-diseño-1.png" },
-  { image: "/bodega-diseño-2.png" },
-  { image: "/camara-leis-diseño.png" },
-  { image: "/camara-leis-diseño-1.png" },
-  { image: "/camara-leis-diseño-2.png" },
-  { image: "/camara-leis-diseño-3.png" },
+  { image: "/escaleraexterior-diseño.webp" },
+  { image: "/bodega-diseño.webp" },
+  { image: "/bodega-diseño-1.webp" },
+  { image: "/bodega-diseño-2.webp" },
+  { image: "/camara-leis-diseño.webp" },
+  { image: "/camara-leis-diseño-1.webp" },
+  { image: "/camara-leis-diseño-2.webp" },
+  { image: "/camara-leis-diseño-3.webp" },
 ]
 
 export function DisenoSlider() {

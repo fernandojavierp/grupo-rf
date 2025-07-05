@@ -6,7 +6,7 @@ import Image from 'next/image';
 
 const heroImages = [
   {
-    src: '/prueba-escalera.jpg',
+    src: '/prueba-escalera.webp',
     alt: 'Obra de construcción en progreso'
   },
   {

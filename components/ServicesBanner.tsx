@@ -23,7 +23,7 @@ const slides: Slide[] = [
   },
   {
     type: "comparison",
-    leftImage: "/escaleraexterior-diseño.png",
+    leftImage: "/escaleraexterior-diseño.webp",
     rightImage: "/escalera-terminada-loma-la-cruz.webp",
     title: "",
     description: "Del plano 3D a la realidad"
