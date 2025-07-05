@@ -42,7 +42,7 @@ export default function Header() {
         </div>
 
         {/* Desktop Navigation - Centro */}
-        <nav className="hidden md:flex items-center justify-center gap-8 text-md font-medium overflow-hidden">
+        <nav className="hidden flex items-center sm:items-center justify-right sm:justify-center gap-8 text-md font-medium overflow-hidden">
           {mounted && navItems.map((item) => {
             const isActive = item.href === "/"
               ? pathname === "/"

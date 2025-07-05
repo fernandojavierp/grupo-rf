@@ -28,16 +28,16 @@ export default function Home() {
       <section className="py-12 sm:py-16 px-4 md:px-6 bg-blue-900 text-gray-300">
         <div className="container mx-auto">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-8 sm:mb-12">Nuestros servicios</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+          <div className="grid grid-cols-1 flex-col sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {services.map((service, index) => (
               <ScrollAnimationWrapper key={index} delay={index * 0.1}>
                 <Link href={`/services#${service.id}`} className="block">
-                  <div className="rounded-lg p-4 sm:p-6 shadow-sm hover:shadow-md transition-shadow bg-blue-950 min-h-56 sm:min-h-64 flex flex-col cursor-pointer">
+                  <div className="rounded-lg p-4 sm:p-6 shadow-sm hover:shadow-md transition-shadow bg-blue-950 h-56 sm:h-64 flex flex-col cursor-pointer">
                     <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-full flex items-center justify-center mb-3 sm:mb-4">
                       <service.icon className="w-6 h-6 sm:w-8 sm:h-8" /> 
                     </div>
-                    <h3 className="text-lg sm:text-xl font-semibold mb-2">{service.title}</h3>
-                    <p className="text-sm sm:text-base mb-4 text-gray-400 flex-1">{service.description}</p>
+                    <h3 className="text-lg sm:text-xl font-semibold mb-2 line-clamp-2">{service.title}</h3>
+                    <p className="text-sm sm:text-base mb-4 text-gray-400 flex-1 line-clamp-3 overflow-hidden">{service.description}</p>
                     <span className="font-medium flex items-center group hover:text-white mt-auto text-sm sm:text-base">
                       Ver más
                       <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4 ml-1 group-hover:translate-x-1 transition-all" />
@@ -59,12 +59,12 @@ export default function Home() {
       <section className="py-12 sm:py-16 px-4 md:px-6 bg-blue-950 text-gray-300">
         <div className="container mx-auto">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-8 sm:mb-12">Proyectos destacados</h2>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
+          <div className="grid grid-cols-1 flex-col lg:grid-cols-2 gap-6 sm:gap-8">
             {featuredProjects.map((project, index) => (
               <ScrollAnimationWrapper key={project.id} delay={index * 0.1}>
                 <Link href={`/projects/${project.id}`} className="block">
                   <div
-                    className="rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 bg-blue-900 cursor-pointer min-h-80 sm:min-h-96 flex flex-col"
+                    className="rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 bg-blue-900 cursor-pointer h-80 sm:h-96 flex flex-col"
                   >
                     <div className="relative h-48 sm:h-64 flex-shrink-0">
                       <Image
@@ -75,8 +75,8 @@ export default function Home() {
                       />
                     </div>
                     <div className="p-4 sm:p-6 flex flex-col flex-1">
-                      <h3 className="text-lg sm:text-xl font-semibold mb-2">{project.title}</h3>
-                      <p className="text-sm sm:text-base text-gray-400 mb-4 line-clamp-3">{project.description}</p>
+                      <h3 className="text-lg sm:text-xl font-semibold mb-2 line-clamp-2">{project.title}</h3>
+                      <p className="text-sm sm:text-base text-gray-400 mb-0 line-clamp-3 overflow-hidden">{project.description}</p>
                     </div>
                   </div>
                 </Link>
