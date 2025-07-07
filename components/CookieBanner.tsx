@@ -21,7 +21,7 @@ export default function CookieBanner() {
     <div className="fixed bottom-0 left-0 w-full bg-neutral-900 text-white p-4 flex flex-col md:flex-row items-center justify-between z-50">
       <span>
         Usamos cookies para mejorar tu experiencia. Al continuar, aceptas nuestra{" "}
-        <a href="/privacy" className="underline text-blue-300">Política de Privacidad</a>.
+        <a href="/privacidad" className="underline text-blue-300">Política de Privacidad</a>.
       </span>
       <button
         onClick={acceptCookies}
