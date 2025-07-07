@@ -84,7 +84,7 @@ export default function ProjectsPage() {
                 className="block"
               >
                 <div
-                  className="bg-blue-900 rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer"
+                  className="bg-blue-900 rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer mt-5"
                 >
                   <div className="relative h-48 sm:h-64">
                     <Image

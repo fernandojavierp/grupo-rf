@@ -55,7 +55,7 @@ export default function ServicesPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 max-w-6xl mt-10 mx-auto">
             <Link 
               href="#remodelaciones" 
-              className="group flex flex-col items-center p-4 sm:p-6 lg:p-8 bg-blue-950 rounded-xl hover:bg-blue-800 transition-all duration-300 text-white shadow-lg hover:shadow-xl hover:-translate-y-2 min-h-[140px] sm:min-h-[160px] lg:min-h-[180px]"
+              className="group flex flex-col items-center p-4 sm:p-6 lg:p-8 bg-blue-950 rounded-xl hover:bg-blue-800 transition-all duration-300 text-white shadow-lg hover:shadow-xl hover:-translate-y-2 min-h-[140px] sm:min-h-[160px] lg:min-h-[180px] mt-5"
             >
               <div className="w-12 h-12 sm:w-16 sm:h-16 lg:w-20 lg:h-20 bg-blue-800 rounded-full flex items-center justify-center mb-3 sm:mb-4 lg:mb-6 group-hover:bg-blue-700 transition-colors">
                 <Wrench className="w-6 h-6 sm:w-8 sm:h-8 lg:w-10 lg:h-10" />
@@ -68,7 +68,7 @@ export default function ServicesPage() {
             
             <Link 
               href="#construcciones" 
-              className="group flex flex-col items-center p-4 sm:p-6 lg:p-8 bg-blue-950 rounded-xl hover:bg-blue-800 transition-all duration-300 text-white shadow-lg hover:shadow-xl hover:-translate-y-2 min-h-[140px] sm:min-h-[160px] lg:min-h-[180px]"
+              className="group flex flex-col items-center p-4 sm:p-6 lg:p-8 bg-blue-950 rounded-xl hover:bg-blue-800 transition-all duration-300 text-white shadow-lg hover:shadow-xl hover:-translate-y-2 min-h-[140px] sm:min-h-[160px] lg:min-h-[180px] mt-5"
             >
               <div className="w-12 h-12 sm:w-16 sm:h-16 lg:w-20 lg:h-20 bg-blue-800 rounded-full flex items-center justify-center mb-3 sm:mb-4 lg:mb-6 group-hover:bg-blue-700 transition-colors">
                 <Building2 className="w-6 h-6 sm:w-8 sm:h-8 lg:w-10 lg:h-10" />
@@ -81,7 +81,7 @@ export default function ServicesPage() {
             
             <Link 
               href="#diseño"
-              className="group flex flex-col items-center p-4 sm:p-6 lg:p-8 bg-blue-950 rounded-xl hover:bg-blue-800 transition-all duration-300 text-white shadow-lg hover:shadow-xl hover:-translate-y-2 min-h-[140px] sm:min-h-[160px] lg:min-h-[180px] sm:col-span-2 lg:col-span-1"
+              className="group flex flex-col items-center p-4 sm:p-6 lg:p-8 bg-blue-950 rounded-xl hover:bg-blue-800 transition-all duration-300 text-white shadow-lg hover:shadow-xl hover:-translate-y-2 min-h-[140px] sm:min-h-[160px] lg:min-h-[180px] sm:col-span-2 lg:col-span-1 mt-5"
             >
               <div className="w-12 h-12 sm:w-16 sm:h-16 lg:w-20 lg:h-20 bg-blue-800 rounded-full flex items-center justify-center mb-3 sm:mb-4 lg:mb-6 group-hover:bg-blue-700 transition-colors">
                 <Box className="w-6 h-6 sm:w-8 sm:h-8 lg:w-10 lg:h-10" />

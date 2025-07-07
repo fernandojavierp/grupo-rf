@@ -85,13 +85,13 @@ export default function ContactPage() {
                   <Phone className="h-5 w-5 mr-3 text-white flex-shrink-0" />
                   <span className="text-sm sm:text-base text-gray-300 group-hover:text-white transition-colors">+56 9 7230 4874</span>
                 </a>
-                <a href="mailto:contacto@gruporf.cl" className="flex items-center group">
+                <a href="mailto:gruporf.contacto@gmail.com" className="flex items-center group">
                   <Mail className="h-5 w-5 mr-3 text-white flex-shrink-0" />
-                  <span className="text-sm sm:text-base text-gray-300 group-hover:text-white transition-colors">contacto@gruporf.cl</span>
+                  <span className="text-sm sm:text-base text-gray-300 group-hover:text-white transition-colors">gruporf.contacto@gmail.com</span>
                 </a>
                 <div className="flex items-start">
                   <MapPin className="h-5 w-5 mr-3 mt-1 text-white flex-shrink-0" />
-                  <span className="text-sm sm:text-base text-gray-300">Av. Providencia 1234, Santiago, Chile</span>
+                  <span className="text-sm sm:text-base text-gray-300">Huerfanos 1294, Santiago, Chile</span>
                 </div>
               </div>
             </div>

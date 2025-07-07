@@ -12,13 +12,10 @@ export default function Footer() {
             <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4">Grupo RF</h3>
             <p className="mb-4 max-w-md text-sm sm:text-base">
               Empresa líder en remodelaciones y construcciones en Santiago de Chile, ofreciendo servicios de alta
-              calidad y profesionalismo desde 2010.
+              calidad y profesionalismo desde 2019.
             </p>
             <div className="flex space-x-4">
-              <Link href="#" className="hover:text-blue-900 transition-colors" aria-label="Facebook">
-                <Facebook className="h-5 w-5" />
-              </Link>
-              <Link href="#" className="hover:text-blue-900 transition-colors" aria-label="Instagram">
+              <Link href="https://www.instagram.com/somosgruporf/" className="hover:text-blue-900 transition-colors" aria-label="Instagram">
                 <Instagram className="h-5 w-5" />
               </Link>
             </div>
@@ -57,7 +54,7 @@ export default function Footer() {
             <ul className="space-y-3 sm:space-y-4 text-sm sm:text-base">
               <li className="flex items-start">
                 <MapPin className="h-5 w-5 mr-2 mt-0.5 text-blue-950 flex-shrink-0" />
-                <span>Av. Providencia 1234, Santiago, Chile</span>
+                <span>Huerfanos 1294, Santiago, Chile</span>
               </li>
               <li className="flex items-center">
                 <Phone className="h-5 w-5 mr-2 text-blue-950 flex-shrink-0" />
@@ -72,8 +69,8 @@ export default function Footer() {
               </li>
               <li className="flex items-center">
                 <Mail className="h-5 w-5 mr-2 text-blue-950 flex-shrink-0" />
-                <a href="mailto:contacto@gruporf.cl" className="hover:underline">
-                  contacto@gruporf.cl
+                <a href="mailto:gruporf.contacto@gmail.com" className="hover:underline">
+                  gruporf.contacto@gmail.com
                 </a>
               </li>
             </ul>

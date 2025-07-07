@@ -18,7 +18,7 @@ export default function Home() {
           <p className="text-base sm:text-lg max-w-2xl mx-auto text-center px-4">
             En Grupo RF, somos un equipo de profesionales apasionados por la construcción y remodelación. Nos
             especializamos en crear espacios únicos y funcionales que reflejan la personalidad de nuestros
-            clientes. Con más de 10 años de experiencia en el rubro, garantizamos calidad y compromiso en cada
+            clientes. Con más de 6 años de experiencia en el rubro, garantizamos calidad y compromiso en cada
             proyecto.
           </p>
         </div>
@@ -32,15 +32,15 @@ export default function Home() {
             {services.map((service, index) => (
               <ScrollAnimationWrapper key={index} delay={index * 0.1}>
                 <Link href={`/services#${service.id}`} className="block">
-                  <div className="rounded-lg p-4 sm:p-6 shadow-sm hover:shadow-md transition-shadow bg-blue-950 h-56 sm:h-64 flex flex-col cursor-pointer">
+                  <div className="rounded-lg p-4 sm:p-6 shadow-sm hover:shadow-md transition-shadow bg-blue-950 h-56 sm:h-64 flex flex-col cursor-pointer group">
                     <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-full flex items-center justify-center mb-3 sm:mb-4">
                       <service.icon className="w-6 h-6 sm:w-8 sm:h-8" /> 
                     </div>
                     <h3 className="text-lg sm:text-xl font-semibold mb-2 line-clamp-2">{service.title}</h3>
-                    <p className="text-sm sm:text-base mb-4 text-gray-400 flex-1 line-clamp-3 overflow-hidden">{service.description}</p>
-                    <span className="font-medium flex items-center group hover:text-white mt-auto text-sm sm:text-base">
+                    <p className="text-sm sm:text-base mb-4 text-gray-400 flex-1 line-clamp-3 overflow-hidden group-hover:text-green-300 group-hover:line-clamp-none transition-all duration-700 ease-out group-hover:animate-matrix-typing">{service.description}</p>
+                    <span className="font-medium flex items-center hover:text-white mt-auto text-sm sm:text-base group/link overflow-hidden">
                       Ver más
-                      <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4 ml-1 group-hover:translate-x-1 transition-all" />
+                      <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4 ml-1 group-hover/link:translate-x-1 transition-all" />
                     </span>
                   </div>
                 </Link>
@@ -64,7 +64,7 @@ export default function Home() {
               <ScrollAnimationWrapper key={project.id} delay={index * 0.1}>
                 <Link href={`/projects/${project.id}`} className="block">
                   <div
-                    className="rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 bg-blue-900 cursor-pointer h-80 sm:h-96 flex flex-col"
+                    className="rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 bg-blue-900 cursor-pointer h-80 mt-5 sm:h-96 flex flex-col"
                   >
                     <div className="relative h-48 sm:h-64 flex-shrink-0">
                       <Image
@@ -152,7 +152,7 @@ const services = [
     ),
   },
   {
-    id: "diseno",
+    id: "diseño",
     title: "Diseño",
     description: "Creamos planos 3D detallados que te permiten ver tu proyecto antes de construirlo, garantizando precisión y funcionalidad.",
     icon: ({ className }: { className?: string }) => (

@@ -54,7 +54,7 @@ export default function AboutPage() {
             <div className="order-2 md:order-1">
               <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4 sm:mb-6">Nuestra historia</h2>
               <p className="text-sm sm:text-base text-gray-400 mb-4">
-                Fundada en 2010, Grupo RF nació de la pasión por la construcción y el diseño. Con más de una década de experiencia, hemos consolidado un equipo de profesionales dedicados a transformar ideas en realidad, ejecutando cada proyecto con los más altos estándares de calidad y precisión.
+                Fundada en 2019, Grupo RF nació de la pasión por la construcción y el diseño. Con más de una década de experiencia, hemos consolidado un equipo de profesionales dedicados a transformar ideas en realidad, ejecutando cada proyecto con los más altos estándares de calidad y precisión.
               </p>
               <p className="text-sm sm:text-base text-gray-400">
                 Nuestro recorrido nos ha permitido especializarnos en una amplia gama de servicios, desde remodelaciones integrales hasta la construcción de proyectos comerciales complejos, siempre con el objetivo de superar las expectativas de nuestros clientes.
@@ -103,21 +103,21 @@ export default function AboutPage() {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-            <div className="bg-blue-900 p-4 sm:p-6 rounded-lg text-center transform hover:-translate-y-2 transition-transform duration-300">
+            <div className="bg-blue-900 p-4 sm:p-6 rounded-lg text-center transform hover:-translate-y-2 mt-5 transition-transform duration-300">
               <Award className="h-8 w-8 sm:h-10 sm:w-10 text-white mx-auto mb-4" />
               <h3 className="text-lg sm:text-xl font-semibold text-white mb-2">Calidad garantizada</h3>
               <p className="text-sm sm:text-base text-gray-400">
                 Utilizamos materiales de primera y aplicamos los más altos estándares en cada proyecto.
               </p>
             </div>
-            <div className="bg-blue-900 p-4 sm:p-6 rounded-lg text-center transform hover:-translate-y-2 transition-transform duration-300">
+            <div className="bg-blue-900 p-4 sm:p-6 rounded-lg text-center transform hover:-translate-y-2 mt-5 transition-transform duration-300">
               <Users className="h-8 w-8 sm:h-10 sm:w-10 text-white mx-auto mb-4" />
               <h3 className="text-lg sm:text-xl font-semibold text-white mb-2">Equipo profesional</h3>
               <p className="text-sm sm:text-base text-gray-400">
                 Contamos con expertos en cada área para asegurar resultados impecables.
               </p>
             </div>
-            <div className="bg-blue-900 p-4 sm:p-6 rounded-lg text-center transform hover:-translate-y-2 transition-transform duration-300">
+            <div className="bg-blue-900 p-4 sm:p-6 rounded-lg text-center transform hover:-translate-y-2 mt-5 transition-transform duration-300">
               <Handshake className="h-8 w-8 sm:h-10 sm:w-10 text-white mx-auto mb-4" />
               <h3 className="text-lg sm:text-xl font-semibold text-white mb-2">Compromiso total</h3>
               <p className="text-sm sm:text-base text-gray-400">

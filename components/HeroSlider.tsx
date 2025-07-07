@@ -65,7 +65,7 @@ export function HeroSlider() {
       {/* Contenido sobrepuesto */}
       <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4 md:px-8 z-10">
         <h1 className="text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-4 md:mb-6 leading-tight">
-          Grupo RF Construcciones y Servicios
+          Grupo RF Construcciones y servicios
         </h1>
         <p className="text-lg md:text-xl lg:text-2xl text-white/90 mb-6 md:mb-8 max-w-4xl leading-relaxed">
           Transformando espacios con calidad y profesionalismo en Santiago de Chile
