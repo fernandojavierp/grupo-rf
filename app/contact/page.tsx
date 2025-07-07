@@ -1,6 +1,34 @@
 "use client"
 
+import type { Metadata } from "next"
 import type React from "react"
+
+export const metadata: Metadata = {
+  title: "Contacto | Grupo RF Construcciones y Servicios",
+  description: "Contáctanos para tu proyecto de construcción o remodelación en Santiago de Chile. Presupuestos gratuitos y asesoría personalizada.",
+  openGraph: {
+    title: "Contacto | Grupo RF Construcciones y Servicios",
+    description: "Contáctanos para tu proyecto de construcción o remodelación en Santiago de Chile. Presupuestos gratuitos y asesoría personalizada.",
+    url: "https://gruporf.cl/contact",
+    siteName: "Grupo RF",
+    images: [
+      {
+        url: "/banner-servicios.webp",
+        width: 1200,
+        height: 630,
+        alt: "Contacto Grupo RF"
+      }
+    ],
+    locale: "es_CL",
+    type: "website"
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Contacto | Grupo RF Construcciones y Servicios",
+    description: "Contáctanos para tu proyecto de construcción o remodelación en Santiago de Chile. Presupuestos gratuitos y asesoría personalizada.",
+    images: ["/banner-servicios.webp"]
+  }
+}
 import { useState } from "react"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
